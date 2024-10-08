@@ -1,0 +1,351 @@
+header {
+    color: rgb(255, 255, 255);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.upper-nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    max-width: 1200px;
+    align-items: center;
+    gap: 40px;
+}
+
+.upper-nav-contato, .upper-nav-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(223, 20, 20);
+    padding: 10px;
+    border-radius: 30px;
+    gap: 0px;
+}
+
+.upper-nav-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(77, 77, 77, 0.46);
+    padding: 10px;
+    border-radius: 30px;
+    gap: 0px;
+}
+
+.upper-nav-acompanhe a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: rgb(0, 0, 0);
+    border-radius: 40px;
+    font-size: 13px;
+    padding: 10px;
+    font-weight: 800;
+    color: rgb(255, 244, 244);
+    margin-top: 20px;
+    min-width: 80px;
+    transition: 1s;
+}
+
+.upper-nav-acompanhe a:hover {
+    transform: translateY(-3px);
+    background-color: rgb(43, 43, 43);
+    box-shadow: rgba(0, 0, 0, 0.267) 0px 8px 16px;
+}
+
+.checkbox-display-secao {
+    opacity: 0;
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.checkbox-display {
+    opacity: 0;
+    width: 116px;
+    height: 30px;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.upper-nav-acompanhe {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: width 1s, max-height 1s, opacity 1s, visibility 1s;
+}
+
+.checkbox-display:checked ~ .upper-nav-acompanhe {
+    max-height: 200px;
+    opacity: 1;
+    visibility: visible;
+    width: 300px;
+}
+
+.checkbox-display-secao:checked ~ .upper-nav-acompanhe {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    width: 300px;
+}
+
+.upper-secao {
+    font-size: 20px;
+    font-family: "Font Awesome 6 Brands";
+    color: red;
+    letter-spacing: 2px;
+    margin-left: 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 3;
+}
+
+.navegacao {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 1.5rem;
+}
+
+.navegacao a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 800;
+    flex: 2;
+}
+
+.navegacao a:hover {
+    color: rgb(2 172 83);
+}
+
+.logo-eff {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+}
+
+.logo-eff img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 2px;
+}
+
+.logo-eff::before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 115, 0), rgb(255, 251, 0), rgb(72, 255, 0), rgb(0, 255, 213), rgb(0, 43, 255), rgb(122, 0, 255), rgb(255, 0, 200), rgb(255, 0, 0)) 0% 0% / 400%;
+    filter: blur(10px);
+    z-index: 0;
+    opacity: 0.6;
+    animation: 10s linear 0s infinite normal none running glowing;
+    border-radius: 50%;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.nav-menunav-botao {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    width: 60px;
+    position: absolute;
+    gap: 5px;
+    flex-direction: row-reverse;
+    right: 15px;
+    margin-top: -40px;
+}
+
+.tracos-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox-menu {
+    opacity: 0;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    right: 0px;
+    margin-top: -40px;
+}
+
+.tran {
+    display: block;
+    background: #000000;
+    transition: 1s;
+    width: 20px;
+    height: 3px;
+}
+
+.checkbox-menu:checked ~ .nav-menunav-botao span {
+    transition: 1s;
+}
+
+.checkbox-menu:checked ~ .nav-menunav-botao span .top {
+    transform: translate(-25px, 5px) rotate(-45deg);
+    width: 25px;
+    transition: 1s;
+}
+
+.checkbox-menu:checked ~ .nav-menunav-botao span .middle {
+    width: 0px;
+    transition: 0.5s;
+}
+
+.checkbox-menu:checked ~ .nav-menunav-botao span .bottom {
+    transform: translate(-25px, -10px) rotate(45deg);
+    width: 25px;
+    transition: 1s;
+}
+
+.checkbox-menu:checked ~ .nav-menunav-botao label {
+    opacity: 0;
+    transition: 1s;
+}
+
+.nav-menunav-botao label {
+    opacity: 1;
+    font-size: 13px;
+    transition: 2s;
+    color: #000000;
+}
+
+.navegacao-botao {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 900px) {
+    header {
+        position: relative;
+    }
+
+    .logo-eff {
+        width: 200px;
+    }
+
+    .upper-nav {
+        display: flex;
+        flex-flow: wrap;
+        margin-bottom: 20px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .checkbox-display:checked ~ .upper-nav-acompanhe, .checkbox-display-secao:checked ~ .upper-nav-acompanhe {
+        gap: 10px;
+        width: 100% !important;
+    }
+
+    .upper-nav-secao, .upper-nav-contato, .upper-nav-usuario {
+        max-width: 95%;
+        padding: 5px;
+    }
+
+    .upper-nav a {
+        font-size: 13px;
+    }
+
+    .upper-secao {
+        font-size: 15px;
+    }
+
+    .navegacao {
+        flex-direction: column;
+    }
+
+    .navegacao-botao {
+        display: flex;
+    }
+
+    .nav-menunav-botao {
+        display: flex;
+        transition: 1s;
+    }
+
+    .nav-menu .nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: max-height 1s, opacity 1s, transform 1s, visibility 1s;
+    }
+
+    .checkbox-menu:checked ~ .nav-list {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        margin-top: 15px;
+    }
+
+    .checkbox-menu:checked {
+        transform: translateY(65px);
+    }
+
+    .checkbox-menu:checked ~ .nav-menunav-botao {
+        transform: translateY(65px);
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
