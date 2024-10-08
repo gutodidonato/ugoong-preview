@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -26,9 +27,9 @@
                         <label for="checkbox-botao-texto" class="menu-label">MENU</label>
                     </div>
                     <ul class="nav-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Sobre Mim</a></li>
-                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
@@ -45,12 +46,12 @@
                 <a class="botao-gradiente" href=""> Conheça nossa história </a>
                 
             </div>
-            <img src="/imgs/seeta.svg" alt="">
+            <img class="seta" src="/imgs/seeta.svg" alt="">
             <div class="bloco espacado-fundo">
                 <img src="imgs/iMockup - iPhone 15 Pro Max.png" alt="homem-celular">
                 <p class="fonte-transformar">Transformamos a experiência de compra online em um show ao vivo</p>
             </div>
-            <p>Somos uma  <span class="fonte-2">plataforma de compras e vendas online</span>, com o objetivo de promover uma 
+            <p id="inicio">Somos uma  <span class="fonte-2">plataforma de compras e vendas online</span>, com o objetivo de promover uma 
                 conexão direta e transparente entre vendedores e consumidores, proporcionando máxima 
                 eficiência e uma experiência de compra inovadora e interativa.
             </p>
@@ -62,16 +63,32 @@
     <main>
         <div class="faixa secao-2">
             <div class="bloco-secao2">
-                <div class="bloco">
+                <div class="bloco" id="sobre">
                     <p class="texto-bloco-u">Criamos uma experiência de compra onde o conforto do pertencimento 
                         se encontra com as funcionalidades modernas da tecnologia ao vivo.</p>
                     <img class="logo-u" src="/imgs/u.png" alt="">
                 </div> 
                 <p class="texto-preto"> Um portfólio de lives para o seu cliente. Ele pode:</p>
                 <div class="bloco">
-                    <div class="bloco-altura">
-                        <img src="" alt="icone tv">
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/tv.png" alt="icone tv">
                         <p>Garantir preços e promoções exclusivas feitas somente para os espectadores das lives.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/coment.png" alt="icone tv">
+                        <p>Esclarecer e retirar dúvidas na hora.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/share.png" alt="icone tv">
+                        <p>Compartilhar as lives com quem quiser e receber recompensas.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/heart.png" alt="icone tv">
+                        <p>Receber sugestões de lives de acordo com o seu perfil.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/shopping.png" alt="icone tv">
+                        <p>Comprar sem sair da live com o checkout instântaneo.</p>
                     </div>
                 </div>
             </div>
@@ -79,7 +96,7 @@
     </main>
     <section class="secao-3">
         <div class="faixa">
-            <div class="bloco">
+            <div class="bloco" id="produtos">
                 <p class="texto-plataforma">A sua plataforma para vender <br>ao vivo!</p>
             </div>
             <div class="bloco">
@@ -101,10 +118,32 @@
                 </div> 
                 <p class="texto-preto"> Faça as suas vendas agora:</p>
                 <div class="bloco">
-                    <div class="bloco-altura">
-                        <img src="" alt="icone tv">
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/person.png" alt="icone tv">
                         <p>Garantir preços e promoções exclusivas feitas somente para os espectadores das lives.</p>
                     </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/caixas.png" alt="icone tv">
+                        <p>Aumente seu engajamento com as estratégias que só a Ugong te oferece!</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/Group.png" alt="icone tv">
+                        <p>Ferramenta de automação de valores exclusiva, compare os valores de outras plataformas sem estresse.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/joia.png" alt="icone tv">
+                        <p>Prepare preços e promoções especiais para live e aumente seu número de espectadores.</p>
+                    </div>
+                    <div class="bloco-altura-servicos">
+                        <img src="imgs/foguete.png" alt="icone tv">
+                        <p>Participe de datas especiais da plataforma e receba impulssionamento para disparar suas vendas.</p>
+                    </div>
+                </div>
+                <div class="bloco">
+                    <p class="botao-gradiente">
+                        Começar
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -127,12 +166,9 @@
                 <div class="bloco">
                     <div class="comentario">
                         <div class="bloco-comentario">
-                            <img src="imgs/homem.png" alt="">
+                            <img style="margin: 20px 0" src="imgs/homem.png" alt="">
                             <div>
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
+                                <img src="imgs/Group 14.png" alt="">
                             </div>
                             <p>Ótima interação!</p>
                             <p>"Transmitir na Ugong foi muito bom! Os clientes interagiram bastante e fizeram compras diretamente na transmissão. A plataforma é fácil de usar, também gostei da parte de personalização para usuários premium, vale muito a pena. Recomendo!"</p>
@@ -143,7 +179,7 @@
         </div>
     </section>
     <footer>
-        <div class="faixa-footer">
+        <div class="faixa-footer" id="contact">
             <div class="bloco-footer">
                 <div class="coluna-footer">
                     <p class="titulo-footer">Mapa do site</p>
@@ -159,11 +195,14 @@
 
                 </div>
                 <div class="coluna-footer">
-                    <p class="titulo-footer">Mapa do site</p>
-                    <a href="">Sobre</a>
-                    <a href="">Produto</a>
-                    <a href="">Avaliações</a>
-                    <a href="">Contato</a>
+                    <p class="titulo-footer">Redes Sociais</p>
+                    <p>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </p>
                 </div>
             </div>
 

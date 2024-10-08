@@ -34,7 +34,7 @@ footer a:hover { color: white; }
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 .bloco .texto-chamativo{
     font-size: 50px;
@@ -84,6 +84,10 @@ flex-wrap: wrap;
 
 p{
     font-size: 20px;
+}
+
+.seta {
+    width: 530px;
 }
 
 .mao{
@@ -263,4 +267,29 @@ width: 100%;
     color: white;
     font-weight: 700;
     font-size: 25px;
+}
+
+
+.bloco-altura-servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+
+
+i{
+    font-size: 30px;
+    margin: 2px;
+    color: white;
+    transition: 1s color;
+}
+
+i:hover{
+    color: #2feb74;
+    cursor: pointer;
 }
